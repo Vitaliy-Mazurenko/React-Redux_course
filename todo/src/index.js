@@ -1,18 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-//import './index.css';
-//import App from './App';
-//import * as serviceWorker from './serviceWorker';
-const el = (<div>
-    <h1> My Todo List </h1>
-    <input placeholder="search" />
-    <ul>
-        <li> Learn React </li>
-        <li> Build Awesome App </li>
-    </ul>
-</div>
-);
-console.log(el);
 
-ReactDOM.render(el,
+import AppHeader from './components/app-header';
+import SearchPanel from './components/search-panel';
+import TodoList from './components/todo-list';
+
+const App = () => {
+
+    return (
+        <div>
+            <AppHeader />
+            <SearchPanel />
+            <TodoList />
+        </div>
+    );
+};
+
+ReactDOM.render(<App />,
     document.getElementById('root'));
